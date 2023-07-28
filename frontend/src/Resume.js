@@ -285,7 +285,9 @@ jobTitle
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        
       },
+      credentials:true,
       body: JSON.stringify(data),
     })
     .catch(error => {

@@ -10,9 +10,19 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors(
+{
+  origin: ['https://resume-green-beta-71.vercel.app'],
+  methods: ["POST","GET"],
+  credentials:true
+}
+
+));
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+  res.json("hello");
+})
 app.use('/api/auth', authRoutes);
 
 // Function to send the email
