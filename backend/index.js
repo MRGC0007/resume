@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors(
 {
-  origin: ['https://resume-green-beta-71.vercel.app'],
+  origin: ['https://resume-6j37.vercel.app/'],
   methods: ["POST","GET"],
   credentials:true
 }
