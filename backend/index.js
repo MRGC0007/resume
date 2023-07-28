@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5001;
 app.use(cors(
 
   {
-    origin: 'https://resume-6j37.vercel.app/',
+    origin: 'https://resume-green-beta-71.vercel.app',
   }
 ));
 app.use(express.json());
