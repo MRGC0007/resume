@@ -98,6 +98,7 @@ jobTitle
 
 } catch (error) {
   res.status(500).json({ error: 'Failed ' });
+  
 
   console.log(error)
 }

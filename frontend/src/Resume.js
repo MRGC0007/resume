@@ -330,8 +330,7 @@ jobTitle
     setMajor({major:"",});
     setUniversity({university:"",});
     setCompletionYear({completionYear:"",});
-    navigate('/print', { state: { data: data } });
-
+   
   };
 
 
