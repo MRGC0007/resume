@@ -13,20 +13,18 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 
-app.use("/",(req,res)=>{
-
+app.get("/", (req, res) => {
   res.json({
+    message: "hello gaurav"
+  });
+});
 
-      message:"hello gaurav"
-  })
-})
-app.use("/gaurav",(req,res)=>{
-
+app.get("/gaurav", (req, res) => {
   res.json({
+    message: "hello gaurav patel"
+  });
+});
 
-      message:"hello gaurav patel"
-  })
-})
 app.use('/api/auth', authRoutes);
 
 // Function to send the email
