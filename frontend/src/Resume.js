@@ -290,6 +290,7 @@ jobTitle
     })
     .catch(error => {
       window.alert("error from frontend side while sending data path not found", error);
+      window.alert(error)
       return;
     });
 
