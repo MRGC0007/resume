@@ -10,7 +10,12 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(cors());
+app.use(cors(
+
+  {
+    origin: 'https://resume-6j37.vercel.app/',
+  }
+));
 app.use(express.json());
 
 app.get("/", (req, res) => {
