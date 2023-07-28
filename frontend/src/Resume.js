@@ -281,7 +281,7 @@ yearsOfExperience,
 previousEmployer,
 jobTitle
     };
-    await fetch("https://resume-6j37.vercel.app/api/auth/resume", {
+    await fetch("https://resume-6j37.vercel.app/api/auth/resme", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

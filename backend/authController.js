@@ -99,7 +99,10 @@ jobTitle
 } catch (error) {
   res.status(500).json({ error: 'Failed ' });
   
+  res.json({
 
+    message:"hello gaurav"
+})
   console.log(error)
 }
 }
