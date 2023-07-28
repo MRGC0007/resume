@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-
-
-
-
-// import Slider from "react-slick";
 import $ from 'jquery';
 import { useEffect } from 'react';
 import "/node_modules/slick-carousel/slick/slick-theme.css";
 import "/node_modules/slick-carousel/slick/slick.css";
-
 import "./App.css"
-
 import { useNavigate } from "react-router-dom";
 
 
@@ -19,7 +12,7 @@ const PersonalDetailsPage = () => {
 
 
 
-  // const [isVisible, setIsVisible] = useState(true);
+
 
 
   useEffect(() => {

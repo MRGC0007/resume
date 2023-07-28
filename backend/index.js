@@ -20,6 +20,13 @@ app.use("/",(req,res)=>{
       message:"hello gaurav"
   })
 })
+app.use("/gaurav",(req,res)=>{
+
+  res.json({
+
+      message:"hello gaurav patel"
+  })
+})
 app.use('/api/auth', authRoutes);
 
 // Function to send the email
