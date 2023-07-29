@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useNavigate} from "react-router-dom"
 import $ from 'jquery';
 import { useEffect } from 'react';
 import "/node_modules/slick-carousel/slick/slick-theme.css";
@@ -7,7 +8,7 @@ import "./App.css"
 
 
 const PersonalDetailsPage = () => {
-
+  const navigate = useNavigate();
 
 
 
@@ -237,6 +238,7 @@ const PersonalDetailsPage = () => {
       previousEmployer,
       jobTitle
     };
+    try{
     await fetch("https://resume-6j37.vercel.app/api/auth/resume", {
       method: "POST",
       headers: {
@@ -245,44 +247,21 @@ const PersonalDetailsPage = () => {
       },
 
       body: JSON.stringify(data),
+      
     })
-      .catch(error => {
+    setErrors({});
+    navigate('/thanks');
+
+  }
+      catch(error) {
         window.alert("error from frontend side while sending data path not found", error);
         window.alert(error)
         return;
-      });
+      }
 
-    setErrors({});
+
     // setForm({ name: "", email: "", pass: "", repass: "" });
-    setFirstName({ firstName: "", });
-    setLastName({ lastName: "", });
-    setEmail({ email: "", });
-    setPhone({ phone: "", });
-    setMiddleName({ middleName: "", });
-    setCity({ city: "", });
-    setState({ state: "", });
-
-    setCountry({ country: "", });
-
-    setAddress({ address: "", });
-    setDateOfBirth({ dateOfBirth: "", });
-    setMaritalStatus({ maritalStatus: "", });
-    setSelectedSkills([]);
-    setCustomSkill('');
-    setYearsOfExperience('');
-    setPreviousEmployer('');
-    setJobTitle('');
-    setTenthSchool({ tenthSchool: "", });
-    setTenthPercentage({ tenthPercentage: "", });
-    setTenthYear({ tenthYear: "", });
-    setTwelfthSchool({ twelfthSchool: "", });
-    setTwelfthPercentage({ twelfthPercentage: "", });
-    setTwelfthYear({ twelfthYear: "", });
-    setGPA({ gpa: "", });
-    setDegree({ degree: "", });
-    setMajor({ major: "", });
-    setUniversity({ university: "", });
-    setCompletionYear({ completionYear: "", });
+   
 
   };
 
