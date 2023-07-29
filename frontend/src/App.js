@@ -1,12 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import PersonalDetailsPage from './Resume';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Thanks from './Thanks';
 
 function App() {
   return (
     <BrowserRouter>
-  <PersonalDetailsPage/>
+    <Routes>
+<Route path='/' element={<PersonalDetailsPage/>}/>
+<Route path='/thanks' element={<Thanks/>}/>
+    
+    </Routes>
+  
     
     </BrowserRouter>
   );
