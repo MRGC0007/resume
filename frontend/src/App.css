@@ -1,9 +1,27 @@
 /* Education.css */
+.error-message{
+  font-size: 12px;
+  color: rgb(144, 20, 20);
+}
 
+.personal-detail{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+.personal-detail:last-child {
+  align-self: center;
+}
 .education-container {
+ 
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.education-container .education-div{
+  display: grid;
+  grid-template-columns: auto auto  ;
 }
 
 .page-title {
@@ -26,7 +44,7 @@ input[type="text"],
 input[type="number"],
 input[type="email"],
 select {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -358,7 +376,7 @@ label {
 
 input,
 select {
-  width: 100%;
+  width:80%;
   padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -604,7 +622,7 @@ label {
 select,
 input[type="text"],
 input[type="number"] {
-  width: 100%;
+  width: 80%;
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
