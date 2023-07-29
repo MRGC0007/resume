@@ -9,7 +9,7 @@ import "./App.css"
 
 const PersonalDetailsPage = () => {
   const navigate = useNavigate();
-
+  const [isLoading, setIsLoading] = useState(false);
 
 
 
@@ -238,6 +238,7 @@ const PersonalDetailsPage = () => {
       previousEmployer,
       jobTitle
     };
+    setIsLoading(true);
     try{
     await fetch("https://resume-6j37.vercel.app/api/auth/resume", {
       method: "POST",
@@ -249,6 +250,7 @@ const PersonalDetailsPage = () => {
       body: JSON.stringify(data),
       
     })
+    setIsLoading(false); 
     setErrors({});
     navigate('/thanks');
 
@@ -268,6 +270,7 @@ const PersonalDetailsPage = () => {
 
   return (
     <>
+      {isLoading && <div className="loader">Loading...</div>}
       <div id='gaurav'>
 
         <div className="personal-details-container">
