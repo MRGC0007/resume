@@ -6,6 +6,7 @@ import Thanks from './Thanks';
 import ReactGA from 'react-ga';
 ReactGA.initialize('G-8Q35GW0451');
 
+
 function App() {
   return (
     <BrowserRouter>

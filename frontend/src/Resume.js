@@ -12,6 +12,8 @@ const PersonalDetailsPage = () => {
   useEffect(() => {
     // Track the page view when the component mounts
     ReactGA.pageview(window.location.pathname + window.location.search);
+   const gc =  ReactGA.pageview(window.location.pathname + window.location.search);
+   console.log(gc)
   }, []);
 
   const navigate = useNavigate();
