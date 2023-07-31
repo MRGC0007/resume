@@ -1,27 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
+import ReactGA from 'react-ga';
 import {useNavigate} from "react-router-dom"
 import $ from 'jquery';
-import { useEffect } from 'react';
 import "/node_modules/slick-carousel/slick/slick-theme.css";
 import "/node_modules/slick-carousel/slick/slick.css";
 import "./App.css"
 
 
 const PersonalDetailsPage = () => {
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false);
-
-
-
 
   useEffect(() => {
-
-    $('.skills-experience-container').hide();
-    $('.education-container').hide();
-    $('#nav2').hide();
-    $('#nav3').hide();
-
+    // Track the page view when the component mounts
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
+
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const [errors, setErrors] = useState({
     firstName: '',
@@ -53,6 +47,16 @@ const PersonalDetailsPage = () => {
     jobTitle: '',
     // Add other field names here...
   });
+
+  
+  useEffect(() => {
+
+    $('.skills-experience-container').hide();
+    $('.education-container').hide();
+    $('#nav2').hide();
+    $('#nav3').hide();
+
+  }, []);
   const handleClick = () => {
 
 
@@ -262,7 +266,6 @@ const PersonalDetailsPage = () => {
       }
 
 
-    // setForm({ name: "", email: "", pass: "", repass: "" });
    
 
   };
