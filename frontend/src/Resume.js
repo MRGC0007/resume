@@ -61,6 +61,10 @@ const PersonalDetailsPage = () => {
   }, []);
   const handleClick = () => {
 
+    ReactGA.event({
+      category: 'Button',
+      action: 'Next Clicked',
+    });
 
     if (!firstName || !lastName || !email || !phone || !state || !city || !country || !address || !dateOfBirth || !maritalStatus) {
       setErrors({
@@ -94,7 +98,10 @@ const PersonalDetailsPage = () => {
   const handleClick2 = () => {
 
 
-
+    ReactGA.event({
+      category: 'Button',
+      action: 'Previous Clicked',
+    });
 
     $(function () {
       $('#nav1').show();
@@ -112,6 +119,11 @@ const PersonalDetailsPage = () => {
   }
   const handleClick3 = () => {
 
+
+    ReactGA.event({
+      category: 'Button',
+      action: 'Next Clicked',
+    });
     if (!tenthSchool || !tenthYear || !tenthPercentage || !twelfthSchool || !twelfthYear || !twelfthPercentage || !degree || !university || !completionYear || !major || !gpa) {
       setErrors({
         tenthSchool: !tenthSchool ? '10th School is required.' : '',
@@ -140,6 +152,12 @@ const PersonalDetailsPage = () => {
 
   }
   const handleClick4 = () => {
+
+    ReactGA.event({
+      category: 'Button',
+      action: 'Previous Clicked',
+    });
+
     $(function () {
       $('#nav2').show();
       $('#nav1').hide();
@@ -204,6 +222,10 @@ const PersonalDetailsPage = () => {
 
   async function handleFormSubmit(e) {
 
+    ReactGA.event({
+      category: 'Button',
+      action: 'Submit Clicked',
+    });
     e.preventDefault();
     if (!selectedSkills || !jobTitle || !previousEmployer || !yearsOfExperience) {
       setErrors({
